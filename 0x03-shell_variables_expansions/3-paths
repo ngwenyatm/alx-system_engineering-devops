@@ -1,2 +1,2 @@
 #!/bin/bash
-echo find $PATH  -maxdepth 1 -type d -print| wc -l
+echo $((` echo $PATH | GREP -O ":/" | wc -1 ` +1))

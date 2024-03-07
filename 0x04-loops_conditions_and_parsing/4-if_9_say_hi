@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-#prints best school except for the 9th line wher eit prints hi
-for i in {1..10}; do
+#prints best school 10x.print hi on 9th line
+i=1
+while [[ $i -le 10 ]]; do
   if [[ $i -eq 9 ]]; then
+    echo "Best School"
     echo "Hi"
   else
     echo "Best School"
   fi
+  ((i++))
 done

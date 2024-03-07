@@ -2,7 +2,6 @@
 #prints best school except for the 9th line wher eit prints hi
 for i in {1..10}; do
   if [[ $i -eq 9 ]]; then
-    echo "Best School"
     echo "Hi"
   else
     echo "Best School"

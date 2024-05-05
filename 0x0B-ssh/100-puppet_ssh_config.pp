@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # using Puppet to make changes to our configuration file
 
-file {'etc/ssh/ssh_config':
+file { 'etc/ssh/ssh_config':
  ensure => present,
 }
 
 file_line { 'Turn off passwd auth':
  path	=> '/etc/ssh/ssh_config',
- line	=> 'PasswordAuthentic no'
+ line	=> 'PasswordAuthentication no'
  match	=> '^#PasswordAuthentication',
 }
 

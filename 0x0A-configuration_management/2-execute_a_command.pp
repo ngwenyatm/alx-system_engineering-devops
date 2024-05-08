@@ -3,4 +3,5 @@
 exec { 'pkill':
     command => 'pkill -9 -f killmenow',
     provider => 'shell',
+    returns => [0,1],
 }

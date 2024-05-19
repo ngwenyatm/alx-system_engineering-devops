@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#display information about subdomains
+
+domain_information () {dig "$1" | awk -v record_type="$2" '
+  /ANSWER SECTION:/ {seen = 1}
+  seen && NR == 2 {
+    sub(/'"$1"'\./, record_type, $1)
+    print "The subdomain " $1 " is a " $4 " record and points to " $5
+  }
+'}
+
+if [ "$#" == 1 ]
+then
+  domain_information "$1" "www"
+  domain_information "$1" "lb-01"
+  domain_information "$1" "web-01"
+  domain_information "$1" "web-02"
+elif [ "$#" == 2 ]
+then
+  domain_information "$1" "$2"
+fi

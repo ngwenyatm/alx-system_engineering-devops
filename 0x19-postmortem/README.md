@@ -8,15 +8,15 @@ This postmortem details the investigation and recovery process for a server outa
 
 Timeline:
 
-	[12:00]: Users begin reporting issues accessing [Server Name].
-	[12:13]: IT staff is alerted to the server outage.
-	[12:37]: Initial investigation confirms server is unresponsive.
-	[13:09]: Remote diagnostics identify a failed hard drive.
-	[13:20]: System is taken offline for maintenance.
-	[14:01]: The faulty drive was replaced.
-	[14:34]: System undergoes data recovery procedures
-	[14:54]: System boots successfully and undergoes testing.
-	[15:17]: Server is brought back online.
+	12:00: Users begin reporting issues accessing 
+	12:13: IT staff is alerted to the server outage.
+	12:37: Initial investigation confirms server is unresponsive.
+	13:09: Remote diagnostics identify a failed hard drive.
+	13:20: System is taken offline for maintenance.
+	14:01: The faulty drive was replaced.
+	14:34: System undergoes data recovery procedures
+	14:54: System boots successfully and undergoes testing.
+	15:17: Server is brought back online.
 
 Root Cause:
 

@@ -1,4 +1,5 @@
 exec { 'fix--for-nginx':
-  command => "sed -i 's/worker_processes 4;/worker_processes 7;/g' /etc/nginx/nginx.conf; sudo service nginx restart",
-  path    => ['/bin', '/usr/bin', '/usr/sbin']
+  command => "bash -c \"sed -iE 's/^ULIMIT=.*/ULIMIT=\\\"-n 8192\\\"/' \
+/etc/default/nginx; service nginx restart\"",
+  path    => '/usr/bin:/usr/sbin:/bin'
 }
